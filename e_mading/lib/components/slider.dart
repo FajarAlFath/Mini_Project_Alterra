@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Slider extends StatelessWidget {
-  const Slider({super.key, required this.title, required this.description, required this.image});
+class SliderPage extends StatelessWidget {
+  const SliderPage({super.key, required this.title,required this.description, required this.image});
 
   final String title;
   final String description;
@@ -16,12 +16,13 @@ class Slider extends StatelessWidget {
       color: Colors.white,
       child: Column(
         children: <Widget>[
+
           SvgPicture.asset(
             image,
             width: width*0.6,
           ),
           const SizedBox(
-            height: 60,
+            height: 30,
           ),
           Text(
             title,
