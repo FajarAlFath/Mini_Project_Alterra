@@ -14,21 +14,27 @@ class _OnBoardingState extends State<OnBoarding> {
 
   final List<Widget> _pages = [
     const SliderPage(
-      title: ' ',
+      title: '',
       description: 'Welcome to E-Mading Politeknik Negeri Lhokseumawe',
       image: 'assets/img/1.svg',
+      tinggi: 0,
+      tinggi2: 0,
     ),
     const SliderPage(
       title: 'on-boarding1',
       description:
           'E-Mading Politeknik Negeri Lhokseumawe is a news and article platform for all students in Politeknik Negeri Lhokseumawe. With this App you can update any information or news in Politeknik Negeri Lhokseumawe',
       image: 'assets/img/2.svg',
+      tinggi: 50,
+      tinggi2: 20,
     ),
     const SliderPage(
       title: 'on boarding 2',
       description:
           'whith E-Mading you can also add your own personal article to share around community in campus. Add your creativity and improve your writing skill',
       image: 'assets/img/3.svg',
+      tinggi: 70,
+      tinggi2: 5,
     ),
   ];
 

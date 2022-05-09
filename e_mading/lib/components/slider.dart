@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SliderPage extends StatelessWidget {
-  const SliderPage({super.key, required this.title,required this.description, required this.image});
+  const SliderPage({super.key, required this.title,required this.description, required this.image, required this.tinggi, required this.tinggi2});
 
   final String title;
   final String description;
   final String image;
+  final double tinggi;
+  final double tinggi2;
 
 
   @override
@@ -21,15 +23,15 @@ class SliderPage extends StatelessWidget {
             image,
             width: width*0.6,
           ),
-          const SizedBox(
-            height: 30,
+          SizedBox(
+            height: tinggi,
           ),
           Text(
             title,
             style: const TextStyle(fontSize: 28,fontWeight: FontWeight.bold),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: tinggi2,
           ),
           Padding(padding: 
           const EdgeInsets.symmetric(horizontal: 80),
@@ -44,7 +46,7 @@ class SliderPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),),
           const SizedBox(
-            height: 60,
+            height: 40,
           )
         ],
       ),
