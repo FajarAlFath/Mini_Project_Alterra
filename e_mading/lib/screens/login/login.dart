@@ -149,7 +149,7 @@ class _LoginScreenState extends State<LoginScreen>
           child: isLogin
               ? const Text(
                   "Don't have an account? Sign up",
-                  style: TextStyle(color: kPrimaryColor, fontSize: 18),
+                  style: TextStyle(color: Colors.black, fontSize: 18),
                 )
               : null,
         ),

@@ -18,7 +18,7 @@ class _OnBoardingState extends State<OnBoarding> {
       description: 'Welcome to E-Mading Politeknik Negeri Lhokseumawe',
       image: 'assets/img/1.svg',
       tinggi: 0,
-      tinggi2: 0,
+      tinggi2: 200,
     ),
     const SliderPage(
       title: 'on-boarding1',
@@ -26,7 +26,7 @@ class _OnBoardingState extends State<OnBoarding> {
           'E-Mading Politeknik Negeri Lhokseumawe is a news and article platform for all students in Politeknik Negeri Lhokseumawe. With this App you can update any information or news in Politeknik Negeri Lhokseumawe',
       image: 'assets/img/2.svg',
       tinggi: 50,
-      tinggi2: 20,
+      tinggi2: 100,
     ),
     const SliderPage(
       title: 'on boarding 2',
@@ -34,7 +34,7 @@ class _OnBoardingState extends State<OnBoarding> {
           'whith E-Mading you can also add your own personal article to share around community in campus. Add your creativity and improve your writing skill',
       image: 'assets/img/3.svg',
       tinggi: 70,
-      tinggi2: 5,
+      tinggi2: 100,
     ),
   ];
 
@@ -66,7 +66,8 @@ class _OnBoardingState extends State<OnBoarding> {
                     duration: const Duration(milliseconds: 300),
                     height: 10,
                     width: (index == _currentPage) ? 30 : 10,
-                    margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 30),
+                    margin:
+                        const EdgeInsets.symmetric(horizontal: 5, vertical: 30),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         color: (index == _currentPage)
@@ -75,34 +76,37 @@ class _OnBoardingState extends State<OnBoarding> {
                   );
                 }),
               ),
-              InkWell(
-                onTap: () {
-                  _controller.nextPage(duration: 
-                  const Duration(milliseconds: 800),
-                  curve: Curves.easeInOutQuint);
-                },
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  alignment: Alignment.center,
-                  height: 70,
-                  width: (_currentPage == (_pages.length - 1))? 200 : 75,
-                  decoration: BoxDecoration(
-                    color: Colors.yellow,
-                    borderRadius: BorderRadius.circular(35)),
-                    child: (_currentPage == (_pages.length - 1))? 
-                    const Text('Get Started',
-                    style: TextStyle(
-                      color: Colors.white,fontSize: 20,
-                    ),) : const Icon(
-                      Icons.navigate_next,
-                      size: 50,
-                      color: Colors.white,
-                    ),
-                  ),
+              Material(
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/login');
+                  },
+                  child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 300),
+                      alignment: Alignment.center,
+                      height: 70,
+                      width: (_currentPage == (_pages.length - 1)) ? 200 : 100,
+                      decoration: BoxDecoration(
+                          color: Colors.yellow,
+                          borderRadius: BorderRadius.circular(35)),
+                      child: (_currentPage == (_pages.length - 1))
+                          ? const Text(
+                              'Get Started',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            )
+                          : const Text(
+                              'Swipe',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            )),
                 ),
-                const SizedBox(
-                  height: 50,
-                )
+              ),
+              const SizedBox(
+                height: 100,
+              )
             ],
           ),
         ],

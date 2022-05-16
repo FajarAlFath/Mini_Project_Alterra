@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "413322594106",
+    "project_id": "e-mading-6345c",
+    "storage_bucket": "e-mading-6345c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413322594106:android:168f4f842ba0c9d6ffb203",
+        "android_client_info": {
+          "package_name": "E.Mading"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413322594106-9h0l9ge2h0r8vuqa64ajs4hhmnmf1vlt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApWSaU2LrTwpAN0VpkuHhJ9W_qaIqLnBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413322594106-9h0l9ge2h0r8vuqa64ajs4hhmnmf1vlt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413322594106:android:55e402144308206bffb203",
+        "android_client_info": {
+          "package_name": "com.example.e_mading"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413322594106-9h0l9ge2h0r8vuqa64ajs4hhmnmf1vlt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApWSaU2LrTwpAN0VpkuHhJ9W_qaIqLnBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413322594106-9h0l9ge2h0r8vuqa64ajs4hhmnmf1vlt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
