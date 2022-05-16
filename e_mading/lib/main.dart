@@ -1,8 +1,10 @@
 import 'package:e_mading/components/constants.dart';
 import 'package:e_mading/screens/login/login.dart';
+import 'package:e_mading/screens/news/detail.dart';
 import 'package:e_mading/screens/onboarding1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(const MyApp());
 
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/onboarding': (context) => const OnBoarding(),
         '/login': (context) => const LoginScreen(),
+        '/detail': (context) => const Detail(),
       },
       theme: ThemeData(
           primaryColor: kPrimaryColor,
