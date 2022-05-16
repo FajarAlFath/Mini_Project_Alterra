@@ -4,22 +4,20 @@ import '../../../components/constants.dart';
 import '../../../components/input.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({
+  LoginForm({
     Key? key,
     required this.isLogin,
     required this.animationDuration,
     required this.size,
     required this.defaultLoginSize,
-    required this.controller,
-    required this.controller2,
   }) : super(key: key);
 
   final bool isLogin;
   final Duration animationDuration;
   final Size size;
   final double defaultLoginSize;
-  final TextEditingController controller;
-  final TextEditingController controller2;
+  final myUsername = TextEditingController();
+  final myPassword = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +44,7 @@ class LoginForm extends StatelessWidget {
                 //USERNAME INPUT CONTAINER
                 InputContainer(
                   child: TextField(
-                    controller: controller,
+                    controller: myUsername,
                     cursorColor: kPrimaryColor,
                     decoration: const InputDecoration(
                         icon: Icon(
@@ -60,7 +58,7 @@ class LoginForm extends StatelessWidget {
                 //PASSWORD INPUT CONTAINER
                 InputContainer(
                     child: TextField(
-                  controller: controller2,
+                  controller: myPassword,
                   cursorColor: kPrimaryColor,
                   obscureText: true,
                   decoration: const InputDecoration(
@@ -69,6 +67,7 @@ class LoginForm extends StatelessWidget {
                       border: InputBorder.none),
                 )),
                 const SizedBox(height: 10),
+                //BUTTON SEND
                 InkWell(
                   onTap: () {},
                   borderRadius: BorderRadius.circular(30),

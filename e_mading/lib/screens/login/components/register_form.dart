@@ -4,24 +4,21 @@ import '../../../components/constants.dart';
 import '../../../components/input.dart';
 
 class RegisterForm extends StatelessWidget {
-  const RegisterForm({
+  RegisterForm({
     Key? key,
     required this.isLogin,
     required this.animationDuration,
     required this.size,
     required this.defaultLoginSize,
-    required this.controller,
-    required this.controller2,
-    required this.controller3,
   }) : super(key: key);
 
   final bool isLogin;
   final Duration animationDuration;
   final Size size;
   final double defaultLoginSize;
-  final TextEditingController controller;
-  final TextEditingController controller2;
-  final TextEditingController controller3;
+  final myUsername = TextEditingController();
+  final myName = TextEditingController();
+  final myPassword = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +48,7 @@ class RegisterForm extends StatelessWidget {
                   //USERNAME
                   InputContainer(
                     child: TextField(
-                      controller: controller,
+                      controller: myUsername,
                       cursorColor: kPrimaryColor,
                       decoration: const InputDecoration(
                           icon: Icon(
@@ -64,7 +61,7 @@ class RegisterForm extends StatelessWidget {
                   ),
                   InputContainer(
                     child: TextField(
-                      controller: controller2,
+                      controller: myName,
                       cursorColor: kPrimaryColor,
                       decoration: const InputDecoration(
                           icon: Icon(
@@ -77,7 +74,7 @@ class RegisterForm extends StatelessWidget {
                   ),
                   InputContainer(
                       child: TextField(
-                    controller: controller3,
+                    controller: myPassword,
                     cursorColor: kPrimaryColor,
                     obscureText: true,
                     decoration: const InputDecoration(
@@ -86,6 +83,7 @@ class RegisterForm extends StatelessWidget {
                         border: InputBorder.none),
                   )),
                   const SizedBox(height: 10),
+                  //BUTTON SEND
                   InkWell(
                     onTap: () {},
                     borderRadius: BorderRadius.circular(30),
