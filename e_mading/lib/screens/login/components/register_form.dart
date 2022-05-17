@@ -138,7 +138,9 @@ class _RegisterFormState extends State<RegisterForm> {
                   const SizedBox(height: 10),
                   //BUTTON SEND
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/navbar');
+                    },
                     borderRadius: BorderRadius.circular(30),
                     child: Container(
                       width: widget.size.width * 0.8,

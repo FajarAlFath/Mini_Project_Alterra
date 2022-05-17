@@ -1,8 +1,8 @@
-import 'model.dart';
+import 'package:e_mading/model/model.dart';
 
-class Newsmodel {
+class Article {
   Source source;
-  String author;
+  String? author;
   String title;
   String description;
   String url;
@@ -10,26 +10,28 @@ class Newsmodel {
   String publishedAt;
   String content;
 
-  Newsmodel({
-    required this.source,
-    required this.author,
-    required this.title,
-    required this.description,
-    required this.url,
-    required this.urlToImage,
-    required this.publishedAt,
-    required this.content,
-  });
+  //Now let's create the constructor
+  Article(
+      {required this.source,
+      required this.author,
+      required this.title,
+      required this.description,
+      required this.url,
+      required this.urlToImage,
+      required this.publishedAt,
+      required this.content});
 
-  factory Newsmodel.fromJson(Map<String, dynamic> json) {
-    return Newsmodel(
-        source: Source.fromJson(json['source']),
-        author: json['author'] as String,
-        title: json['title'] as String,
-        description: json['description'] as String,
-        url: json['url'] as String,
-        urlToImage: json['urlToImage'] as String,
-        publishedAt: json['publishedAt'] as String,
-        content: json['url'] as String);
+  //And now let's create the function that will map the json into a list
+  factory Article.fromJson(Map<String, dynamic> json) {
+    return Article(
+      source: Source.fromJson(json['source']),
+      author: json['author'] as String,
+      title: json['title'] as String,
+      description: json['description'] as String,
+      url: json['url'] as String,
+      urlToImage: json['urlToImage'] as String,
+      publishedAt: json['publishedAt'] as String,
+      content: json['content'] as String,
+    );
   }
 }

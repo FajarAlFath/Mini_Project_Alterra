@@ -118,6 +118,7 @@ class _LoginFormState extends State<LoginForm> {
                 InkWell(
                   onTap: () {
                     ProsesLogin();
+                    Navigator.pushNamed(context, '/navbar');
                   },
                   borderRadius: BorderRadius.circular(30),
                   child: Container(
