@@ -10,7 +10,7 @@ class Article {
   String publishedAt;
   String content;
 
-  //Now let's create the constructor
+
   Article(
       {required this.source,
       required this.author,
@@ -21,7 +21,7 @@ class Article {
       required this.publishedAt,
       required this.content});
 
-  //And now let's create the function that will map the json into a list
+  
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
       source: Source.fromJson(json['source']),
